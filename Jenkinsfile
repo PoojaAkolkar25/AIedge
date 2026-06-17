@@ -7,9 +7,7 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                sh 'npm test'
-            }
+            sh 'npm test' // Syntax Error: sh outside steps block!
         }
     }
 }
