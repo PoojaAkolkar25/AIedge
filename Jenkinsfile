@@ -7,11 +7,8 @@ pipeline {
             }
         }
         stage('Test') {
-            bat 'echo Running tests...'
-        }
-        stage('Deploy') {
             steps {
-                echo 'Deploying to staging...'
+                bat 'echo Running tests...'
             }
         }
     }
