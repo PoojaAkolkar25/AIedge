@@ -7,22 +7,12 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                bat 'echo Running unit tests... ALL PASSED'
-            }
+            bat 'echo Running tests...'
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying to staging environment...'
+                echo 'Deploying to staging...'
             }
-        }
-    }
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-        failure {
-            echo 'Pipeline failed! Check the logs.'
         }
     }
 }
