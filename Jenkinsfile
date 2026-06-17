@@ -11,5 +11,10 @@ pipeline {
                 bat 'echo Running tests...'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to staging...'
+            }
+        }
     }
-}
+
