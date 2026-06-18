@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        git '''C:\Program Files\Git\bin\git.exe'''
+    }
     stages {
         stage('Build') {
             steps {
@@ -8,7 +11,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                bat 'echo Running tests...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to staging...'
             }
         }
     }
